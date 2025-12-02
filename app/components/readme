@@ -1,0 +1,491 @@
+// 'use client';
+
+// import Image from 'next/image';
+// import Link from 'next/link';
+
+// const BestSellers = () => {
+//   const products = [
+//     {
+//       id: 1,
+//       name: 'Dent Pure',
+//       image: '/dentpure.png',
+//       rating: 5,
+//     },
+//     {
+//       id: 2,
+//       name: 'True Fem',
+//       image: '/truefem.png',
+//       rating: 5,
+//     },
+//     {
+//       id: 3,
+//       name: 'Vita Renew',
+//       image: '/vitarenew (2).png',
+//       rating: 5,
+//     },
+//     {
+//       id: 4,
+//       name: 'ProstaZen',
+//       image: '/protazen.png',
+//       rating: 5,
+//     },
+//     {
+//       id: 5,
+//       name: 'Nerve Freedom',
+//       image: '/nervefreedom.png',
+//       rating: 5,
+//     },
+//   ];
+
+//   const features = ['Results-Driven', 'All-Natural', 'Non-GMO', 'Cruelty-Free'];
+
+//   return (
+//     <section className="py-16 lg:py-20 bg-[#F8F9FA]">
+//       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+//         {/* Section Header */}
+//         <div className="mb-8">
+//           <h2 className="text-[48px] font-bold text-black mb-6">
+//             Our Best Sellers
+//           </h2>
+//           <p className="text-[18px] text-gray-800 mb-8 leading-relaxed">
+//             Formulated with science-backed all-natural ingredients, our unique supplements support holistic health, healing & wellness.
+//           </p>
+
+//           {/* Features */}
+//           <div className="flex flex-wrap gap-6 mb-12">
+//             {features.map((feature, index) => (
+//               <div key={index} className="flex items-center">
+//                 <span className="text-[20px] font-bold text-black">{feature}</span>
+//                 {index < features.length - 1 && (
+//                   <span className="ml-6 w-px h-8 bg-gray-400"></span>
+//                 )}
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Products Grid */}
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+//           {products.map((product) => (
+//             <div
+//               key={product.id}
+//               className="bg-white rounded-2xl p-6 flex flex-col items-center transition-transform hover:scale-105 duration-300"
+//             >
+//               {/* Product Image */}
+//               <div className="w-full h-[280px] relative mb-6 flex items-center justify-center bg-[#F5F7F9] rounded-xl">
+//                 <div className="relative w-[200px] h-[240px]">
+//                   <Image
+//                     src={product.image}
+//                     alt={product.name}
+//                     fill
+//                     className="object-contain"
+//                   />
+//                 </div>
+//               </div>
+
+//               {/* Product Name */}
+//               <h3 className="text-[24px] font-bold text-black mb-3 text-center">
+//                 {product.name}
+//               </h3>
+
+//               {/* Rating Stars */}
+//               <div className="flex gap-1 mb-6">
+//                 {[...Array(product.rating)].map((_, index) => (
+//                   <svg
+//                     key={index}
+//                     className="w-6 h-6 fill-[#FFA500]"
+//                     viewBox="0 0 24 24"
+//                   >
+//                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+//                   </svg>
+//                 ))}
+//               </div>
+
+//               {/* Shop Now Button */}
+//               <Link
+//                 href={`/product/${product.id}`}
+//                 className="w-full text-center border-2 border-[#1A69BE] text-[#1A69BE] hover:bg-[#1A69BE] hover:text-white font-semibold text-[16px] py-3 px-6 rounded-lg transition-all duration-300"
+//               >
+//                 Shop Now
+//               </Link>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default BestSellers;
+// 'use client';
+
+// import Image from 'next/image';
+
+// const Testimonials = () => {
+//   const testimonials = [
+//     {
+//       id: 1,
+//       product: 'TestoBites',
+//       image: '/testobites.png',
+//       rating: 5,
+//       review: 'TestoBites has been a game changer when it comes to my stamina and energy levels. I can truly feel a difference in my sex drive and virility as well. Highly recommended.',
+//       author: 'Ryan R.',
+//     },
+//     {
+//       id: 2,
+//       product: 'Vita Renew',
+//       image: '/vitarenew (2).png',
+//       rating: 5,
+//       review: 'My pain therapist recommended this product to me and I was surprised by how well it worked. I can see a marked improvement in my Skin Care.',
+//       author: 'Jamie Fields',
+//     },
+//     {
+//       id: 3,
+//       product: 'Nerve Freedom',
+//       image: '/nervefreedom.png',
+//       rating: 5,
+//       review: 'I have been an RN for 20 years and love helping people find solutions to their health issues.NF Product is the best natural product for neuropathy pain hands down.',
+//       author: 'Anonymous',
+//     },
+//   ];
+
+//   return (
+//     <section className="py-16 lg:py-20 bg-white">
+//       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+//         {/* Section Header */}
+//         <div className="text-center mb-20">
+//           <h2 className="text-[48px] font-bold text-black leading-tight">
+//             Verified Customer Testimonials
+//           </h2>
+//         </div>
+
+//         {/* Testimonials Grid */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+//           {testimonials.map((testimonial) => (
+//             <div
+//               key={testimonial.id}
+//               // Added 'relative' for positioning context and 'mt-12' to make room for the pop-out image
+//               className="relative bg-[#E8F4F8] rounded-3xl p-8 pt-10 flex flex-col mt-12"
+//             >
+//               {/* Product Image:
+//                  Positioned absolutely with negative top/left values to break out of the box 
+//               */}
+//               <div className="absolute -top-10 -left-4 w-32 h-32 flex-shrink-0 z-10">
+//                 <Image
+//                   src={testimonial.image}
+//                   alt={testimonial.product}
+//                   fill
+//                   className="object-contain drop-shadow-md"
+//                 />
+//               </div>
+
+//               {/* Header: Title and Stars 
+//                   Added ml-24 to push this content to the right of the absolute image
+//               */}
+//               <div className="ml-24 mb-6">
+//                 <h3 className="text-[22px] font-bold text-black mb-2">
+//                   {testimonial.product}
+//                 </h3>
+                
+//                 {/* Rating Stars */}
+//                 <div className="flex gap-1">
+//                   {[...Array(testimonial.rating)].map((_, index) => (
+//                     <svg
+//                       key={index}
+//                       className="w-5 h-5 fill-[#FFA500]"
+//                       viewBox="0 0 24 24"
+//                     >
+//                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+//                     </svg>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               {/* Review Text */}
+//               <p className="text-[16px] text-gray-700 leading-relaxed mb-6 flex-grow">
+//                 {testimonial.review}
+//               </p>
+
+//               {/* Author */}
+//               <p className="text-[16px] font-medium text-black">
+//                 - {testimonial.author}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Testimonials;
+// 'use client';
+
+// import Image from 'next/image';
+
+// const Testimonials = () => {
+//   const testimonials = [
+//     {
+//       id: 1,
+//       product: 'TestoBites',
+//       image: '/testobites.png',
+//       rating: 5,
+//       review: (
+//         <>
+//           TestoBites has been a<br />
+//           game changer when it<br />
+//           comes to my stamina and<br />
+//           energy levels. I can truly<br />
+//           feel a difference in my sex<br />
+//           drive and virility as well.<br />
+//           Highly recommended.
+//         </>
+//       ),
+//       author: 'Ryan R.',
+//     },
+//     {
+//       id: 2,
+//       product: 'Vita Renew',
+//       image: '/vitarenew (2).png',
+//       rating: 5,
+//       review: (
+//         <>
+//           My pain therapist<br />
+//           recommended this product<br />
+//           to me and I was surprised<br />
+//           by how well it worked. I can<br />
+//           see a marked improvement<br />
+//           in my Skin Care.
+//         </>
+//       ),
+//       author: 'Jamie Fields',
+//     },
+//     {
+//       id: 3,
+//       product: 'Nerve Freedom',
+//       image: '/nervefreedom.png',
+//       rating: 5,
+//       review: (
+//         <>
+//           I have been an RN for 20<br />
+//           years and love helping<br />
+//           people find solutions to their<br />
+//           health issues.NF Product is<br />
+//           the best natural product for<br />
+//           neuropathy pain hands<br />
+//           down.
+//         </>
+//       ),
+//       author: 'Anonymous',
+//     },
+//   ];
+
+//   return (
+//     <section className="py-12 lg:py-12 bg-white">
+//       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+//         {/* Section Header */}
+//         <div className="text-center mb-24">
+//           <h2 className="text-[48px] font-bold text-black leading-tight">
+//             Verified Customer Testimonials
+//           </h2>
+//         </div>
+
+//         <div className="flex flex-wrap justify-center gap-10">
+//           {testimonials.map((testimonial) => (
+//             <div
+//               key={testimonial.id}
+//               className="relative bg-[#E8F4F8] p-8 pt-12 flex flex-col mt-16 flex-shrink-0"
+//               style={{
+//                 width: '443px',
+//                 minHeight: '389px',
+//                 borderRadius: '12px',
+//               }}
+//             >
+//               {/* Product Image */}
+//               <div className="absolute -top-14 -left-6 w-36 h-36 flex-shrink-0 z-10">
+//                 <Image
+//                   src={testimonial.image}
+//                   alt={testimonial.product}
+//                   fill
+//                   className="object-contain drop-shadow-xl"
+//                 />
+//               </div>
+
+//               {/* Header: Title and Stars */}
+//               <div className="ml-24 mb-6">
+//                 <h3 className="text-[24px] font-bold text-black mb-2">
+//                   {testimonial.product}
+//                 </h3>
+                
+//                 <div className="flex gap-1">
+//                   {[...Array(testimonial.rating)].map((_, index) => (
+//                     <svg
+//                       key={index}
+//                       className="w-5 h-5 fill-[#FFA500]"
+//                       viewBox="0 0 24 24"
+//                     >
+//                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+//                     </svg>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               {/* Review Text 
+//                   ADDED: 'ml-2' to indent this text slightly, 
+//                   making the author name below appear further left. 
+//               */}
+//               <p className="text-[16px] text-gray-700 leading-relaxed mb-6 flex-grow font-normal ml-2">
+//                 {testimonial.review}
+//               </p>
+
+//               {/* Author 
+//                   This has no margin-left (other than parent padding), 
+//                   so it sits visually to the left of the review text above.
+//               */}
+//               <p className="text-[16px] font-medium text-black">
+//                 - {testimonial.author}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Testimonials;
+'use client';
+
+import Image from 'next/image';
+
+const Testimonials = () => {
+  const testimonials = [
+    {
+      id: 1,
+      product: 'TestoBites',
+      image: '/testobites.png',
+      rating: 5,
+      review: (
+        <>
+          TestoBites has been a<br />
+          game changer when it<br />
+          comes to my stamina and<br />
+          energy levels. I can truly<br />
+          feel a difference in my sex<br />
+          drive and virility as well.<br />
+          Highly recommended.
+        </>
+      ),
+      author: 'Ryan R.',
+    },
+    {
+      id: 2,
+      product: 'Vita Renew',
+      image: '/vitarenew (2).png',
+      rating: 5,
+      review: (
+        <>
+          My pain therapist<br />
+          recommended this product<br />
+          to me and I was surprised<br />
+          by how well it worked. I can<br />
+          see a marked improvement<br />
+          in my Skin Care.
+        </>
+      ),
+      author: 'Jamie Fields',
+    },
+    {
+      id: 3,
+      product: 'Nerve Freedom',
+      image: '/nervefreedom.png',
+      rating: 5,
+      review: (
+        <>
+          I have been an RN for 20<br />
+          years and love helping<br />
+          people find solutions to their<br />
+          health issues.NF Product is<br />
+          the best natural product for<br />
+          neuropathy pain hands<br />
+          down.
+        </>
+      ),
+      author: 'Anonymous',
+    },
+  ];
+
+  return (
+    <section className="py-12 lg:py-12 bg-white">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="text-center mb-24">
+          <h2 className="text-[48px] font-bold text-black leading-tight">
+            Verified Customer Testimonials
+          </h2>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-10">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="relative bg-[#E8F4F8] p-8 pt-12 flex flex-col mt-16 flex-shrink-0"
+              style={{
+                width: '443px',
+                minHeight: '389px',
+                borderRadius: '12px',
+              }}
+            >
+              {/* Product Image */}
+              <div className="absolute -top-14 -left-6 w-36 h-36 flex-shrink-0 z-10">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.product}
+                  fill
+                  className="object-contain drop-shadow-xl"
+                />
+              </div>
+
+              {/* Header: Title and Stars */}
+              <div className="ml-24 mb-6">
+                <h3 className="text-[24px] font-bold text-black mb-2">
+                  {testimonial.product}
+                </h3>
+                
+                <div className="flex gap-1">
+                  {[...Array(testimonial.rating)].map((_, index) => (
+                    <svg
+                      key={index}
+                      className="w-5 h-5 fill-[#FFA500]"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+
+              {/* Review Text: 
+                 CHANGED: Added 'text-center' and removed previous margins.
+              */}
+              <p className="text-[16px] text-gray-700 leading-relaxed mb-6 flex-grow font-normal text-center">
+                {testimonial.review}
+              </p>
+
+              {/* Author: 
+                 KEPT: 'text-left' (default) ensures it stays on the left side.
+              */}
+              <p className="text-[16px] font-medium text-black text-left">
+                - {testimonial.author}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
